@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-[#000000]">
       <Navbar />
       <div className="pt-20">
         <section id="home" className="min-h-screen py-16">
