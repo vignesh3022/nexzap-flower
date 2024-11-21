@@ -1,37 +1,33 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Services from './pages/Services';
+import Contact from './pages/Contact';  
 
 function App() {
   return (
     <div className="min-h-screen bg-[#000000]">
       <Navbar />
       <div className="pt-20">
+        {/* Home Section */}
         <section id="home" className="min-h-screen py-16">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4 text-white">Welcome Home</h1>
-            <p>This is the home section content.</p>
-          </div>
+          <Home />
         </section>
 
-        <section id="products" className="min-h-screen py-16 bg-[#000000]">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4 text-white">Our Products</h1>
-            <p>This is the products section content.</p>
-          </div>
+        {/* Products Section */}
+        <section id="products" className="min-h-screen py-16">
+          <Products />
         </section>
 
-        <section id="services" className="min-h-screen py-16 bg-[#000000]">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4 text-white">Our Services</h1>
-            <p>This is the services section content.</p>
-          </div>
+        {/* Services Section */}
+        <section id="services" className="min-h-screen py-16">
+          <Services />
         </section>
 
-        <section id="contact" className="min-h-screen py-16 bg-[#000000]">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4 text-white">Contact Us</h1>
-            <p>This is the contact section content.</p>
-          </div>
+        {/* Contact Section */}
+        <section id="contact" className="min-h-screen py-16">
+          <Contact />
         </section>
       </div>
     </div>

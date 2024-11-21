@@ -4,17 +4,21 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-black text-white z-50">
+    <nav className="fixed top-0 w-full bg-white text-black z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[65px]">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('home')} 
@@ -28,27 +32,27 @@ const Navbar = () => {
             <div className="ml-10 flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('home')}
-                className="hover:text-gray-300 transition-colors duration-300 cursor-pointer"
+                className="hover:text-gray-300 text-[20px] transition-colors duration-300 cursor-pointer capitalize"
               >
-                Home
+                HOME
               </button>
               <button
                 onClick={() => scrollToSection('products')}
-                className="hover:text-gray-300 transition-colors duration-300 cursor-pointer"
+                className="hover:text-gray-300 text-[20px] transition-colors duration-300 cursor-pointer capitalize"
               >
-                Products
+                PRODUCTS
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="hover:text-gray-300 transition-colors duration-300 cursor-pointer"
+                className="hover:text-gray-300 text-[20px] transition-colors duration-300 cursor-pointer capitalize"
               >
-                Services
+                SERVICES
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="hover:text-gray-300 transition-colors duration-300 cursor-pointer"
+                className="hover:text-gray-300 text-[20px] transition-colors duration-300 cursor-pointer capitalize"
               >
-                Contact
+                CONTACT
               </button>
             </div>
           </div>
